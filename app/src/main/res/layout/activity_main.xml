@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="欢迎使用微信祖安小助手"
+        android:textColor="#fff"
+        android:textSize="15sp"
+        android:background="@color/colorPrimary"
+        android:gravity="center" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@mipmap/logo" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="~好好学习,天天向上~"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="#000"
+                android:padding="4dp"
+                android:text="使用步骤:" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="#000"
+                android:padding="4dp"
+                android:text="1:开启无障碍服务。" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:padding="4dp"
+                android:textSize="10sp"
+                android:text="(点击下方按钮，开启无障碍服务下->服务下，点击#微信祖安小助手--开启)" />
+
+            <Button
+                android:id="@+id/bt_wza_per"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:background="@color/colorPrimary"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#fff"
+                android:padding="4dp"
+                android:textSize="12sp"
+                android:layout_marginTop="8dp"
+                android:text="开启无障碍服务" />
+
+
+            <TextView
+                android:id="@+id/tv_wza_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="4dp"
+                android:textSize="12sp"
+                android:layout_marginTop="8dp"
+                android:text="未开启" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="#000"
+                android:padding="4dp"
+                android:text="2:开启悬浮框权限。" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:padding="4dp"
+                android:textSize="10sp"
+                android:text="(点击下方按钮，‘在其他应用上显示’--允许)" />
+
+            <Button
+                android:id="@+id/bt_yf_per"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:background="@color/colorPrimary"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#fff"
+                android:padding="8dp"
+                android:textSize="12sp"
+                android:layout_marginTop="8dp"
+                android:text="开启悬浮窗权限" />
+
+            <TextView
+                android:id="@+id/tv_yf_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="4dp"
+                android:textSize="12sp"
+                android:layout_marginTop="8dp"
+                android:text="未开启" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="#000"
+                android:padding="8dp"
+                android:text="3:祖安模式选择" />
+
+            <RadioGroup
+                android:id="@+id/rg_mode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_mode1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="口吐芬芳(优雅模式)" />
+
+                <RadioButton
+                    android:id="@+id/rb_mode2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:text="火力全开(骂爹模式)" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="#000"
+                android:padding="8dp"
+                android:text="4:时间间隔选择" />
+
+            <RadioGroup
+                android:id="@+id/rg_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_time2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="2s" />
+
+                <RadioButton
+                    android:id="@+id/rb_time4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:text="4s" />
+
+                <RadioButton
+                    android:id="@+id/rb_time8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:text="8s" />
+
+                <RadioButton
+                    android:id="@+id/rb_time10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:text="10s" />
+            </RadioGroup>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="#000"
+                android:padding="8dp"
+                android:text="4:启动微信、进入到人/群聊天详情" />
+
+            <Button
+                android:id="@+id/bt_start_app"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:background="@color/gray"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#fff"
+                android:padding="8dp"
+                android:textSize="12sp"
+                android:layout_marginTop="8dp"
+                android:text="启动'微信'app" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
