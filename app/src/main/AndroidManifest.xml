@@ -10,7 +10,16 @@
         tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
+    <!--APP授权系统权限,将APP在源码中编译-->
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.WRITE_SECURE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+
     <application
+        android:name=".app.MyApp"
         android:allowBackup="true"
         android:icon="@mipmap/logo"
         android:label="@string/app_name"
@@ -25,7 +34,7 @@
             </intent-filter>
         </activity>
 
-        <service
+        <!--<service
             android:name=".service.ZuAnService"
             android:enabled="true"
             android:exported="true"
@@ -36,7 +45,22 @@
             <meta-data
                 android:name="android.accessibilityservice"
                 android:resource="@xml/chinainfo" />
+        </service>-->
+
+        <!--淘宝集双十一集猫猫 自动浏览-->
+        <service
+            android:name=".taobao.MaoMaoService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/maomao" />
         </service>
+
     </application>
 
 </manifest>
